@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body {
+    background: #081b29;
+    color: whitesmoke;
+}
+
+header {
+    padding: 10px;
+    text-align: center;
+} */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #282c34;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 10px 0;
+}
+
+.between {
+    font-size: 1.2em;
+}
+
+.btn-again {
+    background-color: #61dafb;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.number {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+main {
+    display: flex;
+}
+
+.left, .right {
+    margin: 10px;
+}
+
+.guess {
+    padding: 5px;
+    font-size: 1em;
+}
+
+.btn-check {
+    background-color: #61dafb;
+    color: white;
+    padding: 5px 10px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.message {
+    font-size: 1.2em;
+}
+
+.label-score,
+.label-highscore {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.score,
+.highscore {
+    font-weight: bold;
+    margin-left: 5px;
+}
+
