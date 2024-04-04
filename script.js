@@ -4,16 +4,22 @@ let secretNumber = Math.trunc(Math.random() * 20 + 1);
 let score = 5;
 let highScore = 0;
 
+const displayMessage = function (message) {
+  document.querySelector(".message").textContent = message;
+};
+
 document.querySelector(".btn-check").addEventListener("click", function () {
   const guess = Number(document.querySelector(".guess").value);
 
   // When there is no input
   if (!guess) {
-    document.querySelector(".message").textContent = "No Number!";
+    // document.querySelector(".message").textContent = "No Number!";
+    displayMessage("No Number!");
 
     // When player wins
   } else if (guess === secretNumber) {
-    document.querySelector(".message").textContent = "Correct Number!";
+    // document.querySelector(".message").textContent = "Correct Number!";
+    displayMessage("Correct Number!");
 
     document.querySelector(".number").textContent = secretNumber;
 
@@ -28,12 +34,14 @@ document.querySelector(".btn-check").addEventListener("click", function () {
   } else if (guess !== secretNumber) {
     if (score > 1) {
       // Using ternary operator
-      document.querySelector(".message").textContent =
-        guess > secretNumber ? "Too high!" : "Too low!";
+      // document.querySelector(".message").textContent =
+      //   guess > secretNumber ? "Too high!" : "Too low!";
+      displayMessage(guess > secretNumber ? "Too high!" : "Too low!");
       score--;
       document.querySelector(".score").textContent = score;
     } else {
-      document.querySelector(".message").textContent = "Game Over";
+      // document.querySelector(".message").textContent = "Game Over";
+      displayMessage("Game Over");
       document.querySelector(".score").textContent = 0;
     }
   }
@@ -46,6 +54,7 @@ document.querySelector(".btn-again").addEventListener("click", function () {
   document.querySelector(".score").textContent = score;
   document.querySelector(".number").textContent = "?";
   document.querySelector(".guess").value = "";
-  document.querySelector(".message").textContent = "Start guessing...";
+  // document.querySelector(".message").textContent = "Start guessing...";
+  displayMessage("Start guessing...");
   document.querySelector("body").style.backgroundColor = "#282c34";
 });
